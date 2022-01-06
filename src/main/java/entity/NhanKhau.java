@@ -1,12 +1,22 @@
 package entity;
 
-import java.util.Date;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import java.sql.Date;
+
+
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class NhanKhau {
     private int id;
     private String hoTen;
     private String biDanh;
-    private String ngaySinh;
+    private Date ngaySinh;
     private String noiSinh;
     private String gioiTinh;
     private String nguyenQuan;
@@ -20,68 +30,42 @@ public class NhanKhau {
     private Date chuyenDenNgay;
     private String noiThuongTruTruoc;
     private String trangThai;
+    private String bieuDienNgaySinh;
 
 
-    public NhanKhau(int id, String hoTen,String ngaySinh, String gioiTinh, String CMND, String trangThai) {
-        this.id=id;
-        this.hoTen=hoTen;
-        this.ngaySinh=ngaySinh;
-        this.gioiTinh=gioiTinh;
-        this.CMND=CMND;
-        this.trangThai=trangThai;
 
-
+    public NhanKhau(int id, String hoTen, String bieuDienNgaySinh, String gioiTinh, String CMND, String trangThai) {
+        this.id = id;
+        this.hoTen = hoTen;
+        this.bieuDienNgaySinh = bieuDienNgaySinh;
+        this.gioiTinh = gioiTinh;
+        this.CMND = CMND;
+        this.trangThai = trangThai;
     }
-
-
 
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
-        this.id=id;
+        this.id = id;
     }
 
     public String getHoTen() {
         return hoTen;
     }
 
-    public void setHoTen(String hoTen) {
-        this.hoTen=hoTen;
+
+    public String getBieuDienNgaySinh() {
+        return bieuDienNgaySinh;
     }
 
-    public String getNgaySinh() {
-        return ngaySinh;
-    }
-
-    public void setNgaySinh(String ngaySinh) {
-        this.ngaySinh=ngaySinh;
-    }
-
-    public String getGioiTinh() {
-        return gioiTinh;
-    }
-
-    public void setGioiTinh(String gioiTinh) {
-        this.gioiTinh=gioiTinh;
-    }
-
-    public String getCMND() {
-        return CMND;
-    }
-
-    public void setCMND(String CMND) {
-        this.CMND=CMND;
-    }
 
     public String getTrangThai() {
         return trangThai;
     }
 
     public void setTrangThai(String trangThai) {
-        this.trangThai=trangThai;
+        this.trangThai = trangThai;
     }
-
-
 }
